@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.home {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home_image {
+  width: 100%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  max-width: 1500px;
+}
+
+.header_logo {
+  width: 100px;
+  object-fit: contain;
+  margin-top: 6px;
+  margin-right: 5px;
+}
+
+.input_one {
+}
+
+.cart_buttons {
+  cursor: pointer;
+}
+
+.cart_ButtonsTwo {
+  cursor: pointer;
+}
+
+.image_book {
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+.header_Nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 20px;
+  flex-direction: row;
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.home_image {
+  width: 100%;
+}
+
+.MyCart {
+  /* display: flex; */
+  /* justify-content: flex-start; */
+}
+
+.button_properties {
+  cursor: cursor;
+}
+
+.header_properties {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-right: 900px;
+  color: white;
+}
+.modal_image {
+  /* border-image-source: url(border.png); */
+  border-color: black;
+  border-image-width: 100px;
+}
+
+.book {
+  height: 200px;
+  width: 200px;
+  /* padding: 20px; */
+  background-color: lightsteelblue;
+  margin: 20px;
+  cursor: pointer;
+  border-style: groove;
+}
+.book_properties_wrapper {
+  position: relative;
+  top: 100px;
+  height: 100px;
+  width: 150px;
+}
+.book_properties {
+  display: flex;
+  background-color: lightgray;
+}
+
+.booklist {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.modal_wrapper {
+  position: fixed;
+  left: 15%;
+  top: 15%;
+  z-index: 1050;
+  width: 70%;
+  height: 70%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  background-color: white;
+}
+
+.wrapper-cart {
+  display: flex;
+  width: 90%;
+}
+.wrapper-cart div {
+  flex-basis: 100%;
+}
+.checkout{
+  justify-content: center;
+    display: grid;
+}
+/* .read-more-link {
+  color: blueviolet;
+  text-decoration: underline;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.extra-content {
+  color: cornflowerblue;
+  font-weight: 500;
+} */
