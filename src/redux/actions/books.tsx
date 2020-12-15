@@ -1,5 +1,5 @@
 import * as type from "../reducers/types";
-
+// All Actions with interfaces
 interface fetchBooksAction {
   type: string;
   payload: any;
@@ -26,6 +26,15 @@ interface addToCartAction {
 export const addToCart = (i: any): addToCartAction => {
   return { type: "ADD_TO_CART", payload: i };
 };
+
+interface saveAdressAction {
+  type: string;
+  payload: any;
+}
+export const saveAddress = (i: any): saveAdressAction => {
+  return { type: "SAVE_ADDRESS", payload: i };
+};
+
 
 interface buyNowAction {
   type: string;
@@ -55,6 +64,3 @@ export const clearCart = (): clearCartAction => {
 };
 
 
-
-
-// CLEAR_CART

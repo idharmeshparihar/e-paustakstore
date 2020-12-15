@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Book from "./Book"
 import { connect } from 'react-redux';
 import { fetchBooks, addToCart, myOrders, buyNow } from '../redux/actions/books';
-//import  {bookListLocal} from '../fixtures'; 
+import LoadContent from './loadContent';
 
 interface IProps {
     bookList: any;
@@ -12,17 +12,11 @@ interface IProps {
     myOrders: (i: any) => void
 }
 
-// interface BooksDispatchProps {
-//     fetchBooks: () => { type: string, payload: any };
-// }
-
 const Home: React.FC<IProps> = ({ bookList, fetchBooks, addToCart, buyNow, myOrders }) => {
-
     useEffect(() => {
         console.log('mounted....');
         fetchBooks()
     }, []);
-    console.log("bookList", bookList)
     return <div className="home">
         <div>
             <img
@@ -32,8 +26,6 @@ const Home: React.FC<IProps> = ({ bookList, fetchBooks, addToCart, buyNow, myOrd
 
             />
         </div >
-        {/* <button className="button-default" onClick={toggle}>Show Modal</button> */}
-
         {bookList ? <div className="booklist" >
             {bookList.map((i: any) => (
                 <Book bookData={i} addToCart={(j: any) => addToCart(j)} buyNow={(k: any) => {
@@ -43,6 +35,7 @@ const Home: React.FC<IProps> = ({ bookList, fetchBooks, addToCart, buyNow, myOrd
                 } />
             ))}
         </div> : ""}
+        {/* <LoadContent/> */}
     </div>
 }
 

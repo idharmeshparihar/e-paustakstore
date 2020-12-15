@@ -5,5 +5,4 @@ export const BUY_NOW = "BUY_NOW";
 export const EMPTY_BUY_NOW = "EMPTY_BUY_NOW";
 export const CLEAR_CART = "CLEAR_CART";
 export const MY_ORDERS = "MY_ORDERS";
-
-//
+export const SAVE_ADDRESS = "SAVE_ADDRESS";

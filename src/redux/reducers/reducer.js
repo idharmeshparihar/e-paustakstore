@@ -1,15 +1,15 @@
 import * as type from "./types";
-
+// Define all reducers
 const intialState = {
   bookList: [],
   basket: [],
   cartItems: [],
   buyItems: [],
   myOrders: [],
+  storeAddress: {},
 };
 
 export default function (state = intialState, action) {
-  console.log("data2", action);
   switch (action.type) {
     case type.FETCH_BOOKS:
       return {
@@ -41,18 +41,12 @@ export default function (state = intialState, action) {
         ...state,
         cartItems: [],
       };
+    case type.SAVE_ADDRESS:
+      return {
+        ...state,
+        storeAddress: { ...state.storeAddress, ...action.payload },
+      };
     default:
       return state;
   }
 }
-
-//case "ADD_TO_BASKET":
-//Logic
-// return{
-//   ...state,
-//   basket:[...state.basket, action.item],
-// }
-//break;
-//case "REMOVE_FROM_BASKET":
-//LOGIC
-//break;
